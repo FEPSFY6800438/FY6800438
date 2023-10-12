@@ -127,59 +127,13 @@
                     </tr>
                 </table>
             </p>
+                        
             <p id="date&time"></p>
             <script>
                 //Javascript to display the date and time on the webpage
                 const d = new Date();
                 document.getElementById("date&time").innerHTML = d;
             </script>
-
-    <script type="text/javascript">
-        Function drawChart(){
-            var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Work', 8],
-                ['Sleep', 8],
-                ['Eat', 2],
-                ['Study', 4],
-                ['Exercise', 2]
-                ]);
-            var options = {
-                title: 'My Daily Activities'
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementByID('chart_div'));
-            chart.draw(data,options);
-        }
-    </script>
-
-    <div id="chart_div"></div>
-
-    <script type="text/javascript">
-        function drawChart() {
-            var data = new.google.visualization.DataTable();
-            data.addColumn('number', 'Age');
-            data.addColumn('number', 'Salary');
-
-            data.addRows([
-                [25,40000],
-                [30, 50000],
-                [35, 60000],
-                [40, 75000],
-                [45, 80000],
-                [50, 90000]
-                ]);
-
-            var options = {
-                title:'Age vs. Salary',
-                hAxis: {title:'Age'},
-                vAxis: {title:'Salary}
-                };
-
-            var chart = {new google.visualization.ScatterChart(document.getElementbyId('chart_div');
-            chart.draw(data, options);
-        }
-    </script>
             
 
     <hr>
