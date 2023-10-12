@@ -135,6 +135,26 @@
             Angluin,D(1998), Queries and concept learning. Machine Learning 2, (4), 319-342
                 </pre>
             </p>
+
+    <head>
+        <title>Change Button Colour</title>
+    </head>
+    <body>
+        <button id="colourButton">Click me to change colour</button>
+    <script>
+        //Get a reference to the button element
+        var button = document.getElemenetByld("colourButton");
+
+        //Function to change the button colour
+        function changeColour() {
+            //Generating a random colour
+            var randomColour = "#" + Math.floor(Math.random()*16777215).toString(16);
+
+            //Set the button's background colour to the random colour
+            button.style.backgroundColour = randomColour;
+        }
+    </script>
+    </body>
     </body>
         
 </html>
