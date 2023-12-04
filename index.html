@@ -68,6 +68,40 @@
             text-justify: inter-word;
         }
     </style>
+
+        <style>
+                #slide-container{
+                        text-align: center;
+                        position: relative;
+                }
+
+                .button-container {
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        margin-bottom: -100px;
+                }
+
+                .button {
+                        padding: 10px 20px;
+                        background-color: #4CAF50;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        margin: 0 5px;
+                }
+
+                .slide-number-container {
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        margin-bottom: -50px;
+                }                
+        </style>
     
         <!table of contents>
         <table>
@@ -249,6 +283,48 @@ Available at: https://www.britannica.com/science/wormhole (Accessed: 28 October 
 
                 </pre>
             </p>
+<hr>
+            <h2>Conference Presentation: The Physics behind Interstellar</h2>
+            <script>
+                    var slideImages = ["Slide1.JPG", "Slide2.JPG", "Slide3.JPG", "Slide4.JPG", "Slide5.JPG"];
+                    var currentSlide = 0;
+
+                    function showSlide() {
+                            document.getElementById('slide').src = slideImages[currentSlide];
+                    }
+
+                    function nextSlide() {
+                            currentSlide = (currentSlide + 1) % slideImages.length;
+                            showSlide();
+                    }
+
+                    function prevSlide() {
+                            currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+                            showSlide();
+                    }
+
+                    function showSlideNumber(slideNumber) {
+                            currentSlide = slideNumber - 1;
+                            showSlide();
+                    }
+
+                    showslide();
+            </script>
+            <div id = "slide-container">
+                    <img id="slide" src="slide1.jpg" alt="Slide 1" style="width:100%; max-width;800px;">
+
+                <div class="button-container">
+                        <button class="button" onclick="prevSlide()">Previous</button>
+                        <button class="button" onclick="nextSlide()">Next</button>
+                </div>
+
+                <div class="slide-number-container">
+                        <button class="button" onclick="showSlideNumber(1)">1</button>
+                        <button class="button" onclick="showSlideNumber(2)">2</button>
+                        <button class="button" onclick="showSlideNumber(3)">3</button>
+                        <button class="button" onclick="showSlideNumber(4)">4</button>
+                        <button class="button" onclick="showSlideNumber(5)">5</button>
+                </div>
         </center>
     </body>
 
